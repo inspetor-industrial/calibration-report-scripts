@@ -1,14 +1,22 @@
 {
   "name": "@inspetor-industrial/calibration-report-scripts",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
   "private": false,
   "main": "index.js",
   "scripts": {
     "dev": "tsx src/index.ts"
   },
-  "keywords": [],
+  "keywords": ["calibration", "report", "scripts", "puppeteer", "automation"],
   "author": "Pedro Augusto <pedr.augustobarbosa.aparecido@gmail.com>",
+  "description": "Scripts para relatórios de calibração utilizando Puppeteer.",
+  "homepage": "https://github.com/inspetor-industrial/calibration-report-scripts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inspetor-industrial/calibration-report-scripts.git"
+  },
+  "bugs": { 
+    "url": "https://github.com/inspetor-industrial/calibration-report-scripts/issues"
+  },
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
