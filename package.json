@@ -1,12 +1,12 @@
 {
   "name": "@inspetor-industrial/calibration-report-scripts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "main": "index.js",
   "types": "src/index.ts",
   "scripts": {
     "dev": "tsx src/index.ts",
-    "prepublishOnly": "pnpm tsc"
+    "prepublish": "pnpm tsc"
   },
   "keywords": ["calibration", "report", "scripts", "puppeteer", "automation"],
   "author": "Pedro Augusto <pedr.augustobarbosa.aparecido@gmail.com>",
