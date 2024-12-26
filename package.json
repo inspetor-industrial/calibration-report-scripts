@@ -8,7 +8,7 @@
     "dev": "tsx src/index.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pedro Augusto <pedr.augustobarbosa.aparecido@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
@@ -19,5 +19,8 @@
   },
   "dependencies": {
     "puppeteer": "^22.3.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
