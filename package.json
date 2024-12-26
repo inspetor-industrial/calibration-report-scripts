@@ -1,9 +1,12 @@
 {
   "name": "@inspetor-industrial/calibration-report-scripts",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "main": "index.js",
   "types": "src/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsx src/index.ts",
     "prepublish": "pnpm tsc"
