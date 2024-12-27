@@ -5,6 +5,8 @@ export async function generatePdf(reportUrl: string, reportName: string) {
   console.log(chalk.blueBright('Initializing Puppeteer...'))
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath: puppeteer.executablePath(),
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   })
 
   console.log(chalk.blueBright('Getting browser page instance...'))
