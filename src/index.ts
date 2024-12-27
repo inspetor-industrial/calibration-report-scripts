@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer'
 export async function generatePdf(reportUrl: string, reportName: string) {
   console.log(chalk.blueBright('Initializing Puppeteer...'))
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: true,
   })
 
   console.log(chalk.blueBright('Getting browser page instance...'))
