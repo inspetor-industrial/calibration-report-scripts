@@ -31,3 +31,7 @@ export async function generatePdf(reportUrl: string, reportName: string) {
   console.log(chalk.greenBright('Puppeteer closed successfully!'))
   console.log(chalk.greenBright('PDF generation completed!'))
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { generatePdf }
+}
