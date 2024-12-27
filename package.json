@@ -1,6 +1,6 @@
 {
   "name": "@inspetor-industrial/calibration-report-scripts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "dev": "tsx src/index.ts",
-    "prepublish": "pnpm tsc"
+    "prepublish": "pnpm tsc",
+    "postinstall": "npx playwright install webkit"
   },
   "keywords": [
     "calibration",
@@ -39,6 +40,7 @@
   },
   "dependencies": {
     "chalk": "^5.4.1",
+    "playwright": "^1.49.1",
     "puppeteer": "^22.3.0"
   }
 }

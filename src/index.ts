@@ -1,23 +1,21 @@
 import chalk from 'chalk'
-import puppeteer from 'puppeteer'
+import { chromium } from 'playwright'
 
 export async function generatePdf(reportUrl: string, reportName: string) {
-  console.log(chalk.blueBright('Initializing Puppeteer...'))
-  const browser = await puppeteer.launch({
+  console.log(chalk.blueBright('Initializing playwright...'))
+  const browser = await chromium.launch({
     headless: true,
-    executablePath: puppeteer.executablePath(),
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   })
 
   console.log(chalk.blueBright('Getting browser page instance...'))
-  const pages = await browser.pages()
-  const page = pages[0]
+  const page = await browser.newPage()
 
   console.log(chalk.blueBright(`Navigating to the report URL: '${reportUrl}'`))
   await page.goto(reportUrl)
 
   try {
-    await page.waitForNetworkIdle()
+    await page.waitForLoadState()
   } catch {}
 
   console.log(chalk.blueBright('Generating PDF...'))
@@ -37,3 +35,7 @@ export async function generatePdf(reportUrl: string, reportName: string) {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { generatePdf }
 }
+
+generatePdf('https://www.google.com', 'google-report').then(() => {
+  console.log('PDF generated!')
+})
