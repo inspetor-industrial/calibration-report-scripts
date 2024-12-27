@@ -35,7 +35,3 @@ export async function generatePdf(reportUrl: string, reportName: string) {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { generatePdf }
 }
-
-generatePdf('https://www.google.com', 'google-report').then(() => {
-  console.log('PDF generated!')
-})
